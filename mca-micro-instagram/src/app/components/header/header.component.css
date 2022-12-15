@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 7%;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 1.75em;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 80%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 1px;
+}
+
+.header a {
+  display: inline-block;
+  position: relative;
+  color: purple;
+}
+
+.header a::after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 5px;
+  left: 0px;
+  background-color: purple;
+  transform-origin: left;
+  transition: transform 0.25s ease-out;
+}
+
+.header a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.search-icon {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #676767;
+}
+
+.search-bar {
+  height: 35px;
+  font-size: 16px;
+  background-color: #efefef;
+  color: #262626;
+  border: none;
+  border-radius: 8px;
+  padding: 3px 16px;
+}
+
+.search-bar::placeholder {
+  color: #a0a0a0;
+}
+
+.search-bar:focus {
+  outline: none;
+}

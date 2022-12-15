@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <a
+    routerLink="/"
+    class="nav-link"
+    routerLinkActive="active-link"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <i class="fa-solid fa-house nav-icon"></i>
+    Home
+  </a>
+  <a
+    routerLink="/create"
+    class="nav-link"
+    routerLinkActive="active-link"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <i class="fa-solid fa-square-plus nav-icon"></i>
+    Create
+  </a>
+  <a
+    routerLink="/explore"
+    class="nav-link"
+    routerLinkActive="active-link"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <i class="fa-solid fa-compass nav-icon"></i>
+    Explore
+  </a>
+</nav>

@@ -1,0 +1,21 @@
+.post-container {
+  max-width: 460px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid #adadad;
+  border-radius: 8px;
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+  margin: 2px 6px;
+}
+
+img {
+  width: 100%;
+}
+
+.post-title {
+  padding: 0;
+}

@@ -1,0 +1,81 @@
+<div
+  class="post-details-container"
+  *ngIf="!isEdit() || post; else postNotFound"
+>
+  <div class="detail-heading">
+    <h3>{{ isEdit() ? "Edit post with id: " + post?.id : "Create post" }}</h3>
+    <div class="options">
+      <a
+        class="btn btn-green"
+        title="Save"
+        [ngClass]="{ 'btn-disabled': postForm.invalid }"
+        (click)="isEdit() ? onEdit() : onCreate()"
+      >
+        <i class="fa-solid fa-check"></i>
+      </a>
+      <a class="btn btn-red" title="Cancel" (click)="onBack()">
+        <i class="fa-solid fa-x"></i>
+      </a>
+    </div>
+  </div>
+  <div class="form-details">
+    <form [formGroup]="postForm" class="form-items">
+      <div class="item">
+        <label for="albumId">
+          Album ID:
+          <span
+            class="error-message"
+            *ngIf="albumId?.invalid && albumId?.touched"
+          >
+            Please enter a valid ID. (Only positive integers)
+          </span>
+        </label>
+        <input
+          formControlName="albumId"
+          type="number"
+          min="0"
+          class="input-text"
+        />
+      </div>
+      <div class="item">
+        <label for="title"
+          >Title:
+          <span class="error-message" *ngIf="title?.invalid && title?.touched">
+            Please enter a valid title.
+          </span></label
+        >
+        <input formControlName="title" type="text" class="input-text" />
+      </div>
+      <div class="item">
+        <label for="thumbnailUrl"
+          >Thumbnail url:
+          <span
+            class="error-message"
+            *ngIf="thumbnailUrl?.invalid && thumbnailUrl?.touched"
+          >
+            Please enter valid thumbnail url.
+          </span></label
+        >
+        <input formControlName="thumbnailUrl" type="text" class="input-text" />
+      </div>
+      <div class="item">
+        <label for="url"
+          >Image url:
+          <span class="error-message" *ngIf="url?.invalid && url?.touched">
+            Please enter valid image url.
+          </span></label
+        >
+        <input formControlName="url" type="text" class="input-text" />
+      </div>
+    </form>
+    <div class="post-image">
+      <img [src]="this.postForm.value.url" alt="Photo of post" />
+    </div>
+  </div>
+</div>
+
+<ng-template #postNotFound>
+  <div class="post-details-container post-not-found">
+    <h3>Post does not exist!</h3>
+  </div>
+</ng-template>

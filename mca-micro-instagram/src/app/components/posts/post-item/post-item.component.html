@@ -1,0 +1,14 @@
+<div class="post-container">
+  <h3 class="post-title">
+    <i
+      class="fa-brands fa-instagram"
+      [ngStyle]="{ color: logoRandomColor }"
+    ></i>
+    {{ post.title }}
+  </h3>
+  <a routerLink="{{ post.id }}/details"
+    ><img
+      src="{{ post.thumbnailUrl }}"
+      alt="Image of post with id: {{ post.id }}"
+  /></a>
+</div>
