@@ -1,7 +1,7 @@
 # Microgram     
      
 ### Description
-Microgram is a frontend project developed using the Angular framework, designed to mimic the functionality and user experience of the popular social media platform, Instagram. This application interacts with the fake API "JSON Placeholder" (http://jsonplaceholder.typicode.com) that provides pictures, thumbnails, and titles, enabling users to engage with posts in a CRUD (Create, Read, Update, Delete) manner. The project includes features such as viewing posts in a list or grid layout, creating new posts, editing existing posts, and deleting posts. Moreover, a detailed view is provided for each post, displaying relevant information such as the associated album, description, and image URL.
+Microgram is a frontend project developed using the Angular framework, designed to mimic the functionality and user experience of the popular social media platform Instagram. This application interacts with the fake API "JSON Placeholder" (http://jsonplaceholder.typicode.com) that provides pictures, thumbnails, and titles, enabling users to engage with posts in a CRUD (Create, Read, Update, Delete) manner. The project includes features such as viewing posts in a list or grid layout, creating new posts, editing existing posts, and deleting posts. Moreover, a detailed view is provided for each post, displaying relevant information such as the associated album, description, and image URL.
 
 ### Key Features
 - Post List and Grid View: Users can seamlessly switch between viewing posts in a list format or a grid layout, providing a dynamic and customizable browsing experience.
